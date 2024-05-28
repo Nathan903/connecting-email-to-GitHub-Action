@@ -1,0 +1,15 @@
+name: Comment Workflow
+on:
+  discussion_comment:
+    types: [created]
+
+jobs:
+  delete-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      
+      - name: Run your script to delete the comment
+        run: |
+          # Add your script/command to delete comments here
